@@ -15,9 +15,11 @@
 
 	<h:form>
 
-		<h:inputText id="name" value="#{helloBean.name}" onclick="alert('ffooo')"></h:inputText>
+		<h:inputText id="name" value="#{helloBean.name}" onclick=""></h:inputText>
 		<br />
-		<h:inputText id="surname" value="#{helloBean.surname}"></h:inputText>
+		<h:inputText id="surname" value="#{helloBean.surname}">
+		<f:ajax execute="surname" render="output" />
+		</h:inputText>
 		<br />
 		<h:commandButton value="Send via AJAX">
 			<f:ajax execute="name surname" render="output" />
