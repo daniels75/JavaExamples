@@ -8,6 +8,7 @@
 <!--  head is needed to execute AJAX, without it works like standard Request  -->
 <h:head>
 	<title>JSF AJAX tutorial</title>
+	<script type="text/javascript" src="example.js" />
 </h:head>
 
 <h:body>
@@ -15,7 +16,7 @@
 
 	<h:form>
 
-		<h:inputText id="name" value="#{helloBean.name}" onclick="alert('foobar')"></h:inputText>
+		<h:inputText id="name" value="#{helloBean.name}" onclick="myFunction('foobar')"></h:inputText>
 		<br />
 		<h:inputText id="surname" value="#{helloBean.surname}">
 			<!--  f:ajax execute="surname" render="output" / -->
@@ -29,8 +30,8 @@
 			<f:ajax execute="name surname" render="output" />
 		</h:commandButton>
 		<br />
-		<h:commandButton value="Another action (no AJAX)">
-			<f:ajax execute="@none"  render="@none" onclick="alert('noAction')"/>
+		<h:commandButton value="Another action (no AJAX)"  >
+			<f:ajax execute="@none"  render="@none" onevent="handleAjax"/>
 		</h:commandButton>
 		<h2>
 			<h:outputText id="output" value="#{helloBean.sayWelcome}" />
