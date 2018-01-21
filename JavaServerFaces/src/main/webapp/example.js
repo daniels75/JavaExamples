@@ -1,6 +1,9 @@
 	function myFunction(msg) {
 	    alert("Message: " + msg);
 	}
+	function doNothing(){
+		
+	}
 	function handleAjax(data) {
 		  var buttonElement = data.source; // The HTML DOM element which invoked the ajax event.
 		    var ajaxStatus = data.status; // Can be "begin", "complete" and "success".
