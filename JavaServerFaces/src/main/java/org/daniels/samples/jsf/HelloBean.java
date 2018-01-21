@@ -13,6 +13,7 @@ public class HelloBean implements Serializable {
 	
 	private String name;
 	private String surname;
+	private String address;
 
 	public String getName() {
 		return name;
@@ -28,6 +29,14 @@ public class HelloBean implements Serializable {
 
 	public void setSurname(String surname) {
 		this.surname = surname;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public String getSayWelcome(){

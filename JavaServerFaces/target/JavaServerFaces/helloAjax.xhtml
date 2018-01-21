@@ -15,16 +15,23 @@
 
 	<h:form>
 
-		<h:inputText id="name" value="#{helloBean.name}" onclick=""></h:inputText>
+		<h:inputText id="name" value="#{helloBean.name}" onclick="alert('foobar')"></h:inputText>
 		<br />
 		<h:inputText id="surname" value="#{helloBean.surname}">
-		<f:ajax execute="surname" render="output" />
+			<!--  f:ajax execute="surname" render="output" / -->
+		</h:inputText>
+		<br />
+		<h:inputText id="address" value="#{helloBean.address}">
+			<!--f:ajax execute="@none" render="@this" /-->
 		</h:inputText>
 		<br />
 		<h:commandButton value="Send via AJAX">
 			<f:ajax execute="name surname" render="output" />
 		</h:commandButton>
-
+		<br />
+		<h:commandButton value="Another action (no AJAX)">
+			<f:ajax execute="@none"  render="@none" onclick="alert('noAction')"/>
+		</h:commandButton>
 		<h2>
 			<h:outputText id="output" value="#{helloBean.sayWelcome}" />
 		</h2>
