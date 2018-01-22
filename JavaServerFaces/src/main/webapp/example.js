@@ -22,3 +22,8 @@
 		            break;
 		    }
 	}
+	
+	var handleAjax = function handleAjax(data) {
+		console.log('ajax executed');
+	}
+	jsf.ajax.addOnEvent(handleAjax);
