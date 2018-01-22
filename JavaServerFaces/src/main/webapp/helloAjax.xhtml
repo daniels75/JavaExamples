@@ -30,6 +30,10 @@
 			<f:ajax execute="name surname" render="output" onevent="ajaxOnEvent"/>
 		</h:commandButton>
 		<br />
+		<h:commandButton value="Another AJAX call" onclick="return checkNoAction(this)">
+			<f:ajax execute="name surname" render="output"/>
+		</h:commandButton>
+		<br />
 		<h:commandButton value="Another action (no AJAX)"  onclick="doNothing()">
 			<f:ajax execute="@none"  render="@none" onevent="handleAjax"/>
 		</h:commandButton>

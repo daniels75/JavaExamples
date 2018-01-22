@@ -2,7 +2,7 @@ function myFunction(msg) {
 	alert("Message: " + msg);
 }
 function doNothing() {
-
+	console.log('>>>> do nothing')
 }
 function ajaxOnEvent(data) {
 	console.log('>>>> ajaxOnEvent');
@@ -31,5 +31,9 @@ var handleAjax = function handleAjax(data) {
 	}
 }
 
+var checkNoAction = function checkNoAction(object) {
+	console.log('>>>> checkNoAction')
+	return false;
+}
 
 jsf.ajax.addOnEvent(handleAjax);
