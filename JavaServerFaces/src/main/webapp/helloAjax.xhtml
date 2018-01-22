@@ -27,7 +27,7 @@
 		</h:inputText>
 		<br />
 		<h:commandButton value="Send via AJAX">
-			<f:ajax execute="name surname" render="output" />
+			<f:ajax execute="name surname" render="output" onevent="ajaxOnEvent"/>
 		</h:commandButton>
 		<br />
 		<h:commandButton value="Another action (no AJAX)"  onclick="doNothing()">
